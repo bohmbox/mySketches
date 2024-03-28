@@ -6,7 +6,7 @@ float waveGap = 14;
 float frequencyShift = 2.7;
 
 void setup(){
-size(1600,1600);
+size(900,900);
 background(255);
 noFill();
 strokeWeight(3);
