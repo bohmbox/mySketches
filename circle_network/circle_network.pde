@@ -13,7 +13,6 @@ float angle = 360 / num_nodes;
 float r = 150;
 
 void draw(){
-  save("circle_network.png");
   translate(200,200);
   ellipse(0,0,2*r,2*r);
   for (int i = 0; i <= num_nodes; i++){
@@ -25,6 +24,7 @@ void draw(){
       line(x0,y0,xf,yf);
     }
   }
+  save("circle_network.png");
 }
 
 float nodeX(int i){

@@ -23,7 +23,7 @@ void draw(){
   diam = random(20,60);
 
 
-  // use values to drwa an ellipse
+  // use values to draw an ellipse
   noStroke();
   fill(r,g,b,a);
   ellipse(x,y,diam,diam);
