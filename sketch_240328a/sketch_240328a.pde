@@ -24,5 +24,6 @@ void draw(){
     }
     y +=waveGap;
   }
+  save("waves_and_moire.png");
 }
 
