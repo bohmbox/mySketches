@@ -12,10 +12,6 @@ void draw(){
   fill(0);
   ellipse(mouseX,mouseY,10,10);
 
-  if (mousePressed == true){
-    float angle = 0;
-    save("moirePatterns.png");
-  }
   float amplitude = mouseY/70.0;
   float phase = mouseX/30.0;
 
@@ -27,5 +23,9 @@ void draw(){
       point(x,y);
       angle+=phase;
     }
+  }
+  if (mousePressed == true){
+    float angle = 0;
+    save("moirePatterns.png");
   }
 }
