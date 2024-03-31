@@ -10,16 +10,15 @@ size(900,900);
 background(255);
 noFill();
 strokeWeight(3);
-frameRate(160);
 }
 
 void draw(){
   // draw from the top to the bottom
   if (y < height){
-    float parserY = 0;
+    float Y = 0;
     for (int i=0; i<=width; i++){
-      parserY = y + amplitude * sin(radians(angle0));
-      point(i,parserY);
+      Y = y + amplitude * sin(radians(angle0));
+      point(i,Y);
       angle0 += frequencyShift;
     }
     y +=waveGap;
