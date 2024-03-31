@@ -1,12 +1,19 @@
-int offsetX = 20;
-int offsetY = 20;
+int offsetX = 10;
+int offsetY = 10;
 
 void setup() {
   size(800,800);
+  background(0);
   float[] origin = {width/2, height/2};
 
   // axis lines
+  stroke(255);
   strokeWeight(3);
+
+  // num of nodes along the line
+  int nodesX = 30;
+  int nodesY = 30;
+  
   // x axis
   float x1 = offsetX;
   float y1 = origin[1];
@@ -17,13 +24,10 @@ void setup() {
   float y3 = offsetY;
   float x4 = origin[0];
   float y4 = height - offsetX;
+  
   // render axis
   line(x1,y1,x2,y2);
   line(x3,y3,x4,y4);
-
-  // num of nodes along the line
-  int nodesX = 20;
-  int nodesY = 20;
 
   // steps
   float stepX = (x2 - x1)/nodesX;
