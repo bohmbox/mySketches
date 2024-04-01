@@ -75,5 +75,5 @@ void draw(){
   fill(0);
   ellipse(0,0,width/32-10,width/32-10);
 
-  
+  save("radiationEyes.png");  
 }
