@@ -1,7 +1,7 @@
 color black = color(0, 0, 0);
 color sepia = color(114, 99, 65);
-float h_steps = 7;
-float v_steps = 7;
+float h_steps = 4;
+float v_steps = 6;
 float h_cell;  
 float v_cell;
 float h_inner;  
@@ -19,7 +19,7 @@ void draw(){
       translate(h_cell,0);
       triangles();
     }
-    translate(-(width+h_cell),v_cell);
+    translate(-(width),v_cell);
   }
   save("trianglePattern.png");
 }
