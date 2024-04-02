@@ -1,3 +1,3 @@
-Triangle pattern based on the cover of the book An introduction to symbolic logic, by Susanne Langer. Dover Publications, 1967.
+Triangle pattern based on the cover of the book "An introduction to symbolic logic", by Susanne Langer. Dover Publications, 1967.
 
-![triangles]("./trianglePattern.png")
+![triangles]("trianglePattern.png")
