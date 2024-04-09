@@ -13,7 +13,7 @@ float d1 = hexRadius/2.8;
 float offset = 200;
 
 void setup(){
-  size(1600,1600);
+  size(2000,2000);
   background(darkGray);
   stroke(lightGray);
   for(int j=1; j<=(height+offset)/hexRadius;j++){
