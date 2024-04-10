@@ -6,10 +6,12 @@ color[] selector ={rosalight,rosadark,rosadarker};
 void setup(){
   size(700,1132);
 
-  strokeWeight(0.1);
-  for(int i= 1; i<width;i+=3){
-    stroke(selector[randomIndex(2)]);
-    line(i,1,i,height-1);
+  strokeWeight(2);
+  for(int j= 1;j<height;j+=1){
+    for(int i= 1; i<width;i+=6){
+      stroke(selector[randomIndex(3)]);
+      point(i,j);
+    }
   }
   noFill();
   strokeWeight(0.7);
