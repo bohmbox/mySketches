@@ -3,4 +3,10 @@ I saw this gorgeous pattern in the form of a kimono.
 
 Here it is, the pattern in all its glory!
 
-![kimono](kimonoPattern.png)
+Inspiration >
+
+![kimono](kusama.png)
+
+Result >
+
+![Pattern](kimonoPattern.png)
