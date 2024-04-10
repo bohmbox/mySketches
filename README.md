@@ -8,3 +8,9 @@ And given that I want to enter the tech industry I thought it would be a great i
 Welcome!
 
 RBR
+
+![bubbles](./bubbles)
+![circle network](./circle_network)
+![circle of Squares](./circleOfSquares)
+
+
