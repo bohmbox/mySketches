@@ -10,5 +10,8 @@ void draw(){
   strokeWeight(random(0.5,0.8));
   float radius = random(1,10);
   ellipse(random(100,900),random(120,1080),radius,radius);
-  //println(radius);
+
+  if(mousePressed){
+    save("bubbles.png");
+  }
 }

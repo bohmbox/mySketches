@@ -2,20 +2,21 @@
 color lightGray = color(58, 82, 88);
 color darkGray = color(32, 58, 63);
 color darkGray2= color(43, 56, 63);
+color pink= color(247,37,133);
 
 // cell parameters
 float[] cellOrigin = {0,0};
-float hexRadius = 70;
-float angle = 120;
+float hexRadius = 100;
+float angle = 70;
 float d1 = hexRadius/2.8;
 
 // net parameters (vectors between cell origins)
 float offset = 200;
 
 void setup(){
-  size(2000,2000);
+  size(1080,720);
   background(darkGray);
-  stroke(lightGray);
+  //stroke(lightGray);
   for(int j=1; j<=(height+offset)/hexRadius;j++){
     pushMatrix();
     for(int i=1;i<=(width+offset)/(hexRadius);i++){
@@ -30,6 +31,7 @@ void setup(){
 }
 
 void cell(){
+  stroke(pink);
   // inner triad of lines
   // 270°
   for(int i=0; i<=2;i++){

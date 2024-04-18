@@ -1,14 +1,15 @@
 //This is my first sketch
-float y = 0;
-float angle0 = 0;
+color blue = color(40, 75, 99);
+float y = -6;
+float angle0 = 10;
 float amplitude = 5;
-float waveGap = 14;
-float frequencyShift = 2.7;
+float waveGap = 15;
+float frequencyShift = 7;
 
 void setup(){
-size(900,900);
-background(255);
-noFill();
+size(390,140);
+background(blue);
+stroke(255);
 strokeWeight(3);
 }
 
