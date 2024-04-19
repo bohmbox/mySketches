@@ -1,47 +1,81 @@
-color paper = color(239, 239, 239);
-float radius = 150;
-float diagonal = radius * sqrt(3)/2;
-float translation = diagonal/3;
-int offsetMargin = 30;
-float[] pX1 = new float[6];
-float[] pY1 = new float[6];
-float[] pX2 = new float[6];
-float[] pY2 = new float[6];
+int sides = 6;
+int radius = 50;
+int angle120 = 120;
+int angle60 = 60;
+float px,py;
+float[] ptsX = new float[sides];
+float[] ptsY = new float[sides];
+
+//net parameters
+float d1 = radius*cos(radians(-30));
 
 void setup(){
-  size(700,700);
-  background(255);
-
-
-  fill(paper);
-  strokeWeight(1);
-  rectMode(CORNER);
-  rect(offsetMargin,offsetMargin,width-2*offsetMargin,height-2*offsetMargin);
-
-
-
+  size(1000,1000);
+  background(0);
+  stroke(255);
+  strokeWeight(2);
   noFill();
-  
-  //origin
-  translate(width/2,height/2);
-  strokeWeight(3);
-  point(0,0);
-  strokeWeight(1);
-
-  ellipse(0,0,radius,radius);
-  //petals
-  for(int i=30;i<=360;i+=60){
-  ellipse(radius/2*cos(radians(i)),radius/2*sin(radians(i)),radius,radius);
-  }
-  strokeWeight(8);
-  for(int i=0;i<6;i++){
-  pX1[i] = radius/2*cos(radians(60*i+30));
-  pY1[i] = radius/2*sin(radians(60*i+30));
-  pX2[i] = diagonal*cos(radians(60*i+60));
-  pY2[i] = diagonal*sin(radians(60*i+60));
-  ellipse(pX2[i],pY2[i],radius,radius);
-  }
-  save("asanoha.png");
 }
 
 
+void draw(){
+  background(0);
+  for(int j= 0; j<height/radius;j++){
+    pushMatrix();
+    for(int i=0;i<width/radius;i++){
+      cell();
+      translate(1.5*radius,pow(-1,i)*d1);
+    }
+    popMatrix();
+    translate(0,sqrt(3)*radius);
+  }
+  if(mousePressed){
+    save("asanoha2.png");
+    print("saved");
+  }
+}
+
+void cell(){
+  polygon();
+  triangule();
+  radial();
+}
+
+void polygon(){
+  beginShape();
+  for(int i = 0; i< sides; i++){
+    px = radius * cos(radians(i*angle60));
+    py = radius * sin(radians(i*angle60));
+    ptsX[i] = px;
+    ptsY[i] = py;
+    vertex(ptsX[i],ptsY[i]);
+    if(i == (sides - 1)){
+    vertex(ptsX[0],ptsY[0]);
+    }
+  }
+  endShape();
+}
+void radial(){
+  for(int i = 0; i< sides/2; i++){
+    px = radius * cos(radians(i*angle120));
+    py = radius * sin(radians(i*angle120));
+    ptsX[i] = px;
+    ptsY[i] = py;
+    line(0,0,ptsX[i],ptsY[i]);
+    }
+}
+
+void triangule(){
+  beginShape();
+  for(int i = 0; i< sides/2; i++){
+    px = radius * cos(radians(i*angle120));
+    py = radius * sin(radians(i*angle120));
+    ptsX[i] = px;
+    ptsY[i] = py;
+    vertex(ptsX[i],ptsY[i]);
+    if(i == (sides/2)-1){
+    vertex(ptsX[0],ptsY[0]);
+    }
+  }
+  endShape();
+}
