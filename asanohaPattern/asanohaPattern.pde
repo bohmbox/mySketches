@@ -30,7 +30,7 @@ void draw(){
     translate(0,sqrt(3)*radius);
   }
   if(mousePressed){
-    save("asanoha2.png");
+    save("asanohaPattern.png");
     print("saved");
   }
 }
