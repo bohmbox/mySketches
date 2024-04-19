@@ -6,7 +6,7 @@ This is the recreation of the first seccions of the flower of life. Later I will
 
 Result >
 
-![asahonaSeed](./asahonaSeed.png)
+![asahonaSeed](./asanohaSeed.png)
 
 References:
 

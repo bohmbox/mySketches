@@ -7,7 +7,7 @@ I will try to replicate it with processing. Later, with what I learnt doing it, 
 
 Result >
 
-![asahonaPattern](./asahonaPattern.png)
+![asahonaPattern](./asanohaPattern.png)
 
 References:
 
