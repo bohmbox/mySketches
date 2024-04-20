@@ -1,4 +1,6 @@
-I found this pattern while looking for info about how to animat optical art. I found it stunning and I hope at some point to integrate it into another project.
+Fascinated by the visuals in the beach house album 7, I tried to understand how could those visuals could have been produced. 
+
+Trying to get an answer, I found this stunning animated pattern and I hope at some point to integrate it into another project.
 
 Result >
 
