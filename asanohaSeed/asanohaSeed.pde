@@ -19,7 +19,7 @@ void setup(){
   strokeWeight(3);
   noFill();
   //noLoop();
-  frameRate(3);
+  frameRate(2);
 }
 
 void draw(){
