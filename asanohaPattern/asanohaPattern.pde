@@ -1,5 +1,5 @@
 int sides = 6;
-int radius = 50;
+int radius = 80;
 int angle120 = 120;
 int angle60 = 60;
 float px,py;
@@ -10,7 +10,7 @@ float[] ptsY = new float[sides];
 float d1 = radius*cos(radians(-30));
 
 void setup(){
-  size(1000,1000);
+  size(1600,1600);
   background(0);
   stroke(255);
   strokeWeight(2);
