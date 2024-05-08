@@ -1,10 +1,7 @@
-int[] color0 = {35,24,16};
-color variant;
 float squareSide;
 
 void setup(){
-
-  size(600,600);
+  fullScreen();
   background(235);
   noLoop();
   //modeRect(center);
@@ -15,10 +12,11 @@ void draw(){
   int j =1;
   while(j < height){
     for(int i = 1; i < width; i+=squareSide){
-      fill(color(color0[0]+i,color0[1]+j,color0[2]+i+j));
+      fill(map(i,0,width,0,255),map(j,0,height,0,255),map(mouseX,0,width,255,0));
       rect(i,j,squareSide,squareSide);
     }
 
     j+=squareSide;
   }
+  save("colorPallete.png");
 }

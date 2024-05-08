@@ -10,7 +10,8 @@ float[] ptsY = new float[sides];
 float d1 = radius*cos(radians(-30));
 
 void setup(){
-  size(1600,1600);
+  fullScreen();
+  //size(1600,1600);
   background(0);
   stroke(255);
   strokeWeight(2);

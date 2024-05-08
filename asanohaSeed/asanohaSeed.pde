@@ -1,6 +1,7 @@
 //polygon parameters
 int vertices = 6;
-int  d0 = 300;
+int  d0 = 80; // this is the main parameter to change size
+int rings = 20; // this parameter controls the extension of the pattern
 float r0 = d0/2;
 int index;
 float multiplier;
@@ -13,8 +14,7 @@ float angle0 = (-30);
 float angle = angle0;
 
 void setup(){
-  size(1900,1900);
-  //background(color(89, 169, 106));
+  fullScreen();
   stroke(0);
   strokeWeight(3);
   noFill();
@@ -23,10 +23,10 @@ void setup(){
 }
 
 void draw(){
-  background(color(89, 169, 106));
+  background(0);
   translate(width/2,height/2);
 
-  for(int index = 1; index<10; index++){
+  for(int index = 1; index<rings; index++){
   multiplier = index * r0;
   totalSteps = vertices*index;
   iterator(index); //this is what draws the iteration at index "index" 
@@ -34,7 +34,6 @@ void draw(){
   if(mousePressed){
     print("saved");
     save("asanohaSeed.png");
-
   }
 }
 

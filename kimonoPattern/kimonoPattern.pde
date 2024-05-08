@@ -14,7 +14,8 @@ float d1 = hexRadius/2.8;
 float offset = 200;
 
 void setup(){
-  size(1080,720);
+  fullScreen();
+  //size(1080,720);
   background(darkGray);
   //stroke(lightGray);
   for(int j=1; j<=(height+offset)/hexRadius;j++){
