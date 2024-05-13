@@ -5,3 +5,9 @@ I wanted to create it because I would be able to use it as wallpaper and learn m
 This is the original video.
 
 ![thedotisblack](https://www.youtube.com/watch?v=dTKv_cD1oaE)
+
+RESULT >
+
+![line of symetry](./data/linesOfSymmetry_12.png)
+![line of symetry](./data/linesOfSymmetry_10.png)
+![line of symetry](./data/linesOfSymmetry_21.png)
