@@ -2,7 +2,7 @@
 
 void setup(){
   size(2000,2000,P3D);
-  background(150);
+  background(#5B2374);
   stroke(0,50);
   fill(255,200);
   float xstart = random(10);
@@ -15,12 +15,13 @@ void setup(){
     float xnoise = xstart;
 
     for (float x = -(width/8); 
-        x <= (width/8);
-        x +=3){
+          x <= (width/8);
+          x +=3){
       xnoise +=0.02;
       drawPoint(x,y,noise(xnoise,ynoise));
     }
   }
+  save("blanket.png");
 }
 
 void drawPoint(float x, float y,float noiseFactor){
