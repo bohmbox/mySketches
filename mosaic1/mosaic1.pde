@@ -1,5 +1,5 @@
 float d = 50;
-float l = d/4;
+float l = 2*d/5;
 int lines = 20;
 float wdth;
 float interval = d/10;
@@ -15,7 +15,7 @@ void setup(){
 }
 
 void draw(){
-  m = map(mouseX,0,width,0,255);
+  m = map(mouseX, 0, width, 255 ,0);
   for(int i = 0; i <= width; i+=step){
     for(int j = 0; j <= height; j+=step){
       stroke(random(255),m,random(255));
