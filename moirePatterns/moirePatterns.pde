@@ -24,6 +24,9 @@ void draw(){
       angle+=phase;
     }
   }
+}
+
+void saveMe(){
   if (mousePressed == true){
     float angle = 0;
     save("moirePatterns.png");
