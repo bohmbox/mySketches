@@ -57,6 +57,7 @@ void annotation(){
   textFont(myFont);
   textAlign(RIGHT);
   text("Click '+' or '-' to increase or reduce the number of nodes", width - 50, 35);
+  text("Mouse click to save the drawing", width - 50, 60);
 }
 
 void saveMe(){
