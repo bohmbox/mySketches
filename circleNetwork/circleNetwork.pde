@@ -63,7 +63,7 @@ void annotation(){
 void saveMe(){
   if(mousePressed){
     print("saved");
-    String n = "circleNetwork_"+ numNodes + ".png";
+    String n = "data/circleNetwork_"+ numNodes + ".png";
     save(n);
   }
 }
