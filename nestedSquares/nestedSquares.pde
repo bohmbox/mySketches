@@ -7,14 +7,15 @@ void setup(){
   stroke(255);
   noFill();
   rectMode(CENTER);
+  frameRate(1);
 }
 
 void draw(){
   translate(size/2,size/2);
   for(int j=0;j<height;j+=80){
     for(int i= 0; i<width;i+=80){
-      stroke(i,j,size);
-      square(i,j,size);
+      stroke(random(i),random(j),random(255));
+      square(i,j,random(size));
     }
   }
 }

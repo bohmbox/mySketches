@@ -1,31 +1,38 @@
 color pink = color(245, 127, 179);
-float x0, y0;
-int radius = int(random(5,10));
-float vx;
-float vy;
-float t = 0;
-int particles = 30;
+int numBubbles = 20;
+Bubble[] bubbles = new Bubble[numBubbles];
+int  nextBubble = 0;
 
 void setup(){
   fullScreen();
   noFill();
   stroke(pink);
-  frameRate(10);
-}
-
-void bubble(){
-  strokeWeight(random(0.5,0.8));
-  x0 = random(width);
-  y0 = height;
-  vx = 30*sin(radians(5*t));
-  vy = 10;
-  ellipse(x0 + vx,y0 - vy * t,radius,radius);
+  strokeWeight(1.5);
+  smooth();
 }
 
 void draw(){
-  background(0);
-  bubble();
-  t++;
+  background(#16161b);
+  if(frameCount % 60 == 0){
+    if(nextBubble < bubbles.length){
+      bubbles[nextBubble] = new Bubble(random(width),height);
+      nextBubble++;
+    }
+  }
+  
+  // move and display existing bubbles
+  for(int i = 0; i < bubbles.length; i++){
+    if(bubbles[i] != null){
+      bubbles[i].grow();
+      bubbles[i].display();
+
+      // checks if bubble is big enough to raise and remove it when it reaches the top
+      if(bubbles[i].isBigEnough() && bubbles[i].y < 0){
+        bubbles[i] = null;
+      }
+    }
+  }
+  saveMe();
 }
 
 void saveMe(){
