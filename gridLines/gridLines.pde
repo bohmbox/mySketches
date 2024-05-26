@@ -8,6 +8,7 @@ void setup(){
   noLoop();
 }
 
+//  ----------------------------------------- pattern 1
 int step = 40;
 float x0, y0, xf, yf; 
 
@@ -25,6 +26,7 @@ void pattern1(){
   }
 }
 
+//  ----------------------------------------- pattern 2
 void pattern2(){
   int pointer = 1;
   while(pointer<=height){
@@ -39,6 +41,7 @@ void pattern2(){
   }
 }
 
+//  ----------------------------------------- pattern 3
 int xPadding = 7;
 int yPadding = 10;
 float x,y;
@@ -88,10 +91,55 @@ void pattern3(){
   separatorPattern3();
 }
 
+//  ----------------------------------------- pattern 4
+void specsSquarePattern4(){
+  stroke(#CEF4F4);
+  strokeWeight(6);
+  rectMode(CENTER);
+  noFill();
+}
+void squarePattern4(){
+  specsSquarePattern4();
+  for(int j = 0; j<= width; j+=jump){
+    for(int i = 0; i <= height; i+=blockHeight+xPadding){
+      x = j + blockHeight/2;
+      y = i;
+      w = blockHeight-random(10); // these definitions are missing to get the full effect
+      h = blockHeight-random(10);
+      rect(x,y,w,h);
+    }
+  }
+}
+
+void specSeparatorPattern4(){
+  fill(#36302D);
+  noStroke();
+  rectMode(CORNER);
+}
+
+void separatorPattern4(){
+  specSeparatorPattern4();
+
+  for(int j = 0; j<= width; j+=jump){
+    x0 = j + blockHeight+yPadding;
+    y0 = 0;
+    w = blockHeight;
+    h = height;
+    rect(x0,y0,w,h);
+  }
+}
+
+
+void pattern4(){
+  squarePattern4();
+  separatorPattern4();
+}
+
 void draw(){
-  //pattern1();
+  pattern1();
   //pattern2();
-  pattern3();
+  //pattern3();
+  pattern4();
 
 }
 
