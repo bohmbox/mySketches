@@ -4,13 +4,12 @@ float angleRot = 30;
 float r = 200;
 float xStep,yStep,xJump, yJump;
 void setup(){
-  //size(800,800);
   fullScreen();
   background(bckgrnd);
   stroke(hexColor);
   strokeWeight(6);
   noFill();
-  noLoop();
+  //noLoop();
 }
 
 void draw(){
@@ -25,6 +24,7 @@ void draw(){
       hexagon(xPos, yPos);
     }
   }
+  saveMe();
 }
 
 void hexagon(float xOffset, float yOffset){
@@ -40,5 +40,12 @@ void hexagon(float xOffset, float yOffset){
     }
     endShape(CLOSE);
     innerR -= rStep;
+  }
+}
+
+void saveMe(){
+  if(mousePressed){
+    println("saved");
+    save("innerHex.png");
   }
 }
