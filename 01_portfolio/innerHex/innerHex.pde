@@ -1,8 +1,8 @@
 color bckgrnd = #09102C;
 color hexColor = #E6FAFF;
 float angleRot = 30;
-float r = 200;
-float xStep,yStep,xJump, yJump;
+float r = 100;
+float xStep;
 void setup(){
   fullScreen();
   background(bckgrnd);
@@ -17,8 +17,8 @@ void draw(){
   float xStep = d;
   float ySubStep1 = 2 * d * sin(radians(60));
   float ySubStep2 = 2 * r * (1 + sin(radians(30)));
-  for(int j = 0; j <= height / ySubStep2; j++){
-    for(int i = 0; i <= width / xStep; i++){
+  for(int j = 0; j <= (height+ r) / ySubStep2; j++){
+    for(int i = 0; i <= (width + r) / xStep; i++){
       float xPos = i * xStep;
       float yPos = (i % 2) * ySubStep1 + j * ySubStep2; 
       hexagon(xPos, yPos);

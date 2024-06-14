@@ -1,5 +1,6 @@
 float waveGap = 15.0;
 float angle = 2.0;
+float amplitude, phase; 
 
 void setup(){
   size(800,800);
@@ -12,8 +13,8 @@ void draw(){
   fill(0);
   ellipse(mouseX,mouseY,10,10);
 
-  float amplitude = mouseY/70.0;
-  float phase = mouseX/30.0;
+  amplitude = mouseY/70.0;
+  phase = mouseX/30.0;
 
   for (int j = 0; j <= height; j+=waveGap){
     float y = 0;
@@ -24,11 +25,14 @@ void draw(){
       angle+=phase;
     }
   }
+  saveMe();
 }
 
 void saveMe(){
-  if (mousePressed == true){
+  if (mousePressed){
     float angle = 0;
-    save("moirePatterns.png");
+    String title = "moirePatterns_ampl:" + amplitude +"_phase: " + phase+ ".png";
+    println(title);
+    save(title);
   }
 }

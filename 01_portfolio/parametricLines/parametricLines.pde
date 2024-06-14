@@ -1,4 +1,5 @@
 float x,y;
+float t = 0;
 
 void setup(){
   size(900,900);
@@ -6,15 +7,12 @@ void setup(){
   background(color(0, 71, 108));
 }
 
-float t = 0;
 void draw(){
   stroke(255);
   strokeWeight(5);
   point(x(t),y(t));
+  saveMe();
   t++;
-  if(mousePressed){
-    save("parametricLines.png");
-  }
 }
 
 
@@ -28,3 +26,9 @@ float y(float t){
   return y;
 }
 
+void saveMe(){
+  if(mousePressed){
+    print("saved");
+    save("parametricLines.png");
+  }
+}
