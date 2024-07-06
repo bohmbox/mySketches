@@ -8,7 +8,8 @@ float step = 2*d;
 float m;
 
 void setup(){
-  fullScreen();
+  size(700, 1900);
+  //fullScreen();
   background(0);
   strokeWeight(1.2);
   smooth();

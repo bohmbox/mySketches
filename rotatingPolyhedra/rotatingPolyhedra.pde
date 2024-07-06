@@ -7,7 +7,7 @@ float rotY=0.1;
 float rotZ=0.1;
 
 void setup(){
-  size(600,600,P3D);
+  size(2600,2600,P3D);
   frameRate(10);
 }
 
@@ -33,13 +33,13 @@ void draw(){
   noStroke();
 
   // draw box
-  box(80);
+  box(800);
   noFill();
   //sphereDetail(8);
   stroke(0);
 
   // draw larger outer sphere
-  sphere(80);
+  sphere(800);
 
   save("rotatingPolyhedra.png");
-
+}

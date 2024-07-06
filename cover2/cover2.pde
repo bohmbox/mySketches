@@ -9,7 +9,6 @@ void setup(){
   fullScreen();
   background(myColors[3]);
   stroke(0);
-  strokeWeight(4);
   rectMode(CENTER);
 }
 
@@ -28,10 +27,13 @@ void cell(float x, float y){
   float bigSqr = l;
   float diag = (l/2 - smallSqr/2)*sqrt(2);
   fill(myColors[0]);
+  strokeWeight(4);
   myRect(x, y, bigSqr);
   fill(myColors[1]);
+  strokeWeight(3);
   myRect(x, y, mediumSqr);
   fill(myColors[2]);
+  strokeWeight(2);
   myRect(x - diag, y, smallSqr);
   fill(myColors[2]);
   myRect(x + diag, y, smallSqr);

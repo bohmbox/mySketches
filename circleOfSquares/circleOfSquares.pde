@@ -7,28 +7,44 @@ color amarillo1 = color(185, 158, 46);
 
 // gradient
 float subdivisions = 5;
-float r, max_r;
+int r, max_r;
 float angle;
 float aperture;
 float rectSize;
 
 void setup(){
-  size(600,600);
-  rectMode(CENTER);
+  fullScreen();
+  //size(600,600);
+  rectMode(CORNER);
   noStroke();
-  frameRate(3);
-  
-  max_r = width/2 -100;
-  float aperture =radians(360);
+  //frameRate(3);
+  background(blanco);
 }
 
 
 void draw(){
-  background(fondo);
   translate(width/2,height/2);
-      r = random(2,max_r);
-      println(r);
-      angle = random(1,aperture);
-      rectSize = random(60);
-      rect(r*cos(angle),r*sin(angle),rectSize,rectSize);
+  max_r = width/2 -50;
+  r = int(random(10,max_r));
+  colorMe(r);
+  angle = random(radians(1),radians(360));
+  rectSize = r/20;
+  rotate(angle);
+  rect(r*cos(angle),r*sin(angle),rectSize,rectSize);
 }
+
+void colorMe(int r){
+  if(r <200){
+    fill(blanco);
+  }
+  if(r>200 && r <400){
+    fill(amarillo1);
+  }
+  if(r>400 && r <600){
+    fill(cafe1);
+  }
+  if(r>700 && r < 900){
+    fill(cafe2);
+  }
+}
+       

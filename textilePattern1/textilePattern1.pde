@@ -1,3 +1,4 @@
+int density = 3000;
 void setup(){
   fullScreen();
   stroke(#16161b);
@@ -6,7 +7,7 @@ void setup(){
 }
 
 void draw(){
-  for(int i = 0; i<=3000;i++){
+  for(int i = 0; i<=density;i++){
     float x = random(width);
     float y = random(height);
     float p = random(1); // probability
