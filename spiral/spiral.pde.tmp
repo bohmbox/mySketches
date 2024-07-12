@@ -1,0 +1,51 @@
+import java.util.HashMap;
+import java.util.Map;
+
+Map<String,Float> corners = new HashMap<>();
+
+float squareSize = 100;
+float intervalAngle = PI/2;
+float oldR;
+float R;
+
+
+void setup(){
+  fullScreen();
+  background(255);
+  stroke(0);
+  strokeWeight(10);
+  
+  corners.put("1",-squareSize);
+
+  translate(width/2,height/2);
+  beginShape();
+  vertex(-squareSize/2,0);
+  vertex(-squareSize/2,-squareSize/2);
+  vertex(0,-squareSize/2);
+  vertex(0,0);
+  endShape(CLOSE);
+
+  Spiral s = new Spiral(200,300,150,0,PI/2);
+  s.display();
+}
+
+class Spiral{
+  float x;
+  float y;
+  float r; 
+  float angle0;
+  float anglef;
+
+  Spiral(float x,float y,float r,float angle0,float anglef){
+    this.x = x;
+    this.y = y;
+    this.r = r;
+    this.angle0 = angle0;
+    this.anglef = anglef;
+  }
+
+  void display(){
+    arc(this.x,this.y,this.r,this.r, this.angle0, this.anglef);
+  }
+
+}
